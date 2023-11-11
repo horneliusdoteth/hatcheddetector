@@ -1,38 +1,159 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #161616;
+  color: #fafafa;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #161616;
+  margin-top: 40px;
+  font-size: 75px;
+  font-family: 'VT323', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Input and Submit Styles */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: #161616;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 22px;
+  width: 230px;
+  border-radius: 10px;
+  font-family: 'VT323', monospace;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4c4c4c;
+  color: #fafafa;
+  border: whitesmoke;
+  border-radius: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  font-family: 'VT323', monospace;
+}
+
+
+/* Ticker styles */
+.pixl-ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #161616;
+  color: #fafafa;
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes move {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.ticker-move {
+  display: inline-block;
+  animation: move 15s linear infinite;
+}
+
+.ticker-item {
+  display: inline-block;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.ticker-img {
+  animation: rotate 5s linear infinite;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PixlPet Loaded Image */
+.pixl-image {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* Pixl Pet Loaded Text */
+.pixl-text {
+  background-color: #161616;
+  color: #fafafa;
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+/* Signature style */
+.signature-text {
+  background-color: #161616;
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+/* Footer styles */
+.footer {
+  width: 100%;
+  background-color: #161616;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.footer a {
+  color: #fafafa; 
+  text-decoration: none;
+  margin: 0 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.footer img {
+  width: 30px; 
+  height: auto;
+  margin-right: 10px;
 }
