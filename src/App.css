@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-body{
+body {
   margin: 0;
   padding: 0;
   display: flex;
@@ -21,7 +21,7 @@ body{
   background-color: #161616;
   margin-top: 40px;
   font-size: 75px;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +48,7 @@ input[type="text"] {
   font-size: 22px;
   width: 230px;
   border-radius: 10px;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
 }
 
 button {
@@ -59,9 +59,8 @@ button {
   border-radius: 10px;
   font-size: 26px;
   cursor: pointer;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
 }
-
 
 /* Ticker styles */
 .pixl-ticker {
@@ -69,7 +68,7 @@ button {
   white-space: nowrap;
   background-color: #161616;
   color: #fafafa;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 25px;
   margin-top: 10px;
 }
@@ -80,13 +79,17 @@ button {
 }
 
 @keyframes move {
-  0% { transform: translate3d(100%, 0, 0); }
-  100% { transform: translate3d(-100%, 0, 0); }
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 .ticker-move {
   display: inline-block;
-  animation: move 15s linear infinite;
+  animation: move 20s linear infinite;
 }
 
 .ticker-item {
@@ -94,8 +97,12 @@ button {
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .ticker-img {
@@ -118,7 +125,7 @@ button {
 .pixl-text {
   background-color: #161616;
   color: #fafafa;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 30px;
   margin-top: 30px;
 }
@@ -126,7 +133,7 @@ button {
 /* Signature style */
 .signature-text {
   background-color: #161616;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 25px;
   margin-top: 0px;
 }
@@ -139,21 +146,21 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 25px;
   margin-top: 10px;
 }
 
 .footer a {
-  color: #fafafa; 
+  color: #fafafa;
   text-decoration: none;
-  margin: 0 20px; 
+  margin: 0 20px;
   display: flex;
   align-items: center;
 }
 
 .footer img {
-  width: 30px; 
+  width: 30px;
   height: auto;
   margin-right: 10px;
 }
