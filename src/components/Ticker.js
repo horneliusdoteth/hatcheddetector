@@ -46,9 +46,7 @@ const PIXLTicker = () => {
     const fetchFloors = async () => {
       const sappySealsPrice =
         await fetchFloorPrice("sappy-seals");
-        console.log("Sappy Seals Floor Price1:", sappySealsPrice); 
       setSappySealsFloor(sappySealsPrice);
-      console.log("Sappy Seals Floor Price:2", sappySealsPrice); 
 
       const genesisPixlPrice =
         await fetchFloorPrice(
