@@ -76,7 +76,7 @@ const PIXLTicker = () => {
                 borderRadius: "100px",
               }}
             />
-            Pixl Pets Ξ {genesisPixlPetFloor}
+            Pixl Pets Ξ{genesisPixlPetFloor}
           </div>
           <div className="ticker-item">
             <img
@@ -91,7 +91,7 @@ const PIXLTicker = () => {
                 borderRadius: "100px",
               }}
             />
-            Sappy Seals Ξ {sappySealsFloor}
+            Sappy Seals Ξ{sappySealsFloor}
           </div>
           <div className="ticker-item">
             <img

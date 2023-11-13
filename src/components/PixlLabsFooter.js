@@ -9,17 +9,16 @@ const PixlLabsFooter = () => {
         rel="noopener noreferrer"
       >
         <img
-          src="./images/PIXL.png"
+          src="./images/Logo_Pixlverse.png"
           alt="PIXL Token"
           style={{
-            width: "20px",
-            height: "20px",
+            width: "122px",
+            height: "35px",
             position: "relative",
             top: "2px",
             marginRight: "5px",
           }}
         />
-        Pixlverse
       </a>
       <a
         href="https://gitbook.thepixlverse.com/"
