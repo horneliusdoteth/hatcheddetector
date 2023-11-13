@@ -2,7 +2,7 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import { fetchFloorPrice } from "./OpenSeaService";
+import { fetchFloorPrice } from "./ApiService";
 
 const PIXLTicker = () => {
   const [priceInfo, setPriceInfo] = useState({
