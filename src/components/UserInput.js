@@ -7,9 +7,9 @@ const UserInput = ({
   onSubmit,
 }) => {
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
     if (event.target.checkValidity()) {
-      onSubmit(); // If the form is valid, call the onSubmit prop
+      onSubmit();
     }
   };
 

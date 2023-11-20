@@ -36,8 +36,8 @@ const PIXLTicker = () => {
           error
         );
         setPriceInfo({
-          usd: "Error",
-          native: "Error",
+          usd: "N/A",
+          native: "N/A",
         });
       }
     };
@@ -80,7 +80,7 @@ const PIXLTicker = () => {
           </div>
           <div className="ticker-item">
             <img
-              src={"./images/sappyseals.jpg"}
+              src={"./images/frankenseal.png"}
               alt="Sappy Seals"
               height="25"
               style={{
@@ -111,6 +111,7 @@ const PIXLTicker = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

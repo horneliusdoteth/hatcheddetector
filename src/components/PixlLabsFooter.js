@@ -12,8 +12,8 @@ const PixlLabsFooter = () => {
           src="./images/Logo_Pixlverse.png"
           alt="PIXL Token"
           style={{
-            width: "122px",
-            height: "35px",
+            width: "111px",
+            height: "32px",
             position: "relative",
             top: "2px",
             marginRight: "5px",
@@ -47,8 +47,8 @@ const PixlLabsFooter = () => {
           src="./images/fire.webp"
           alt="PIXL Token"
           style={{
-            width: "20px",
-            height: "20px",
+            width: "37px",
+            height: "35px",
             position: "relative",
             top: "2px",
             marginRight: "5px",
@@ -110,7 +110,27 @@ const PixlLabsFooter = () => {
         />
         DEX Screener PIXL
       </a>
+      <a
+        href="https://twitter.com/horneliusdoteth"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="./images/hornelius.jpg"
+          alt="hornelius"
+          style={{
+            width: "25px",
+            height: "25px",
+            position: "relative",
+            top: "2px",
+            marginRight: "5px",
+            borderRadius: "100%",
+          }}
+        />
+        hornelius.eth twitter
+      </a>
     </div>
+    
   );
 };
 

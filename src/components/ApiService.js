@@ -16,3 +16,4 @@ export const fetchFloorPrice = async (
     return null;
   }
 };
+
