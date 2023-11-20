@@ -37,17 +37,18 @@ function App() {
 
   const fetchPixlPetData = async () => {
     try {
-      const response = await fetch(`https://www.thepixlverse.io/pixlpets/${pixlPetId}`);
+      const response = await fetch(`https://www.thepixlverse.io/pixlpet/${pixlPetId}`);
       const pixlData = await response.json();
       return pixlData;
     } catch (error) {
       console.error("Error fetching data:", error);
       setPixlPetData({
         imageUrl: "./images/cooking.webp",
-        message: "We all got bamboozled, apis down.",
+        message: "We all got bamboozled, apis down. Check back shortly.",
         cardHolderSize: baseCardHolderSize,
         imageSize: baseImageSize
-      })
+      });
+      return null;
     }
   };
   
@@ -71,11 +72,6 @@ function App() {
 
   const handleSubmit = async () => {
     const pixlData = await fetchPixlPetData();
-
-    if (!pixlData) {
-      setPixlPetData({ message: "We all got bamboozled, apis down." });
-      return;
-    }
 
     const newShadowColor = determineShadowColor(pixlData.attributes);
     setShadowColor(newShadowColor);
