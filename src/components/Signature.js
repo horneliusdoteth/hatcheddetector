@@ -14,7 +14,7 @@ const Signature = () => {
   return (
     <div className="signature">
       <img
-        src="./images/hornelius.jpg"
+        src="./images/sealjpg.jpg"
         alt="hornelius.eth"
         style={{
           width: "75px",
