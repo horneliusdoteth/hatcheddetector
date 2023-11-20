@@ -37,7 +37,7 @@ function App() {
 
   const fetchPixlPetData = async () => {
     try {
-      const response = await fetch(`https://www.thepixlverse.io/pixlpet/${pixlPetId}`);
+      const response = await fetch(`https://www.thepixlverse.io/pixlpets/${pixlPetId}`);
       const pixlData = await response.json();
       return pixlData;
     } catch (error) {
