@@ -229,9 +229,9 @@ button {
 
 /* Mobile */
 @media (max-width: 600px) {
-  /* .content-wrapper {
-    margin-bottom: 10px;
-  } */
+  .content-wrapper {
+    margin-bottom: 50px;
+  }
 
   .App-header {
     font-size: 50px;
@@ -247,14 +247,14 @@ button {
     }
   }
   
-  /* .ticker-move {
-    display: inline-block;
-    animation: move 20s linear infinite;
-  } */
 
   input[type="text"] {
     font-size: 18px;
     width: 180px;
+  }
+
+  .card-holder {
+    margin: 15px auto;
   }
 
   button {
