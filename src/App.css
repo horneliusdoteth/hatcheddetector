@@ -298,4 +298,8 @@ button {
   .footer {
     display:none;
   }
+
+  body, html {
+    min-height: 100vh
+  }
 }
