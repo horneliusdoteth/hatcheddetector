@@ -227,19 +227,32 @@ button {
   margin-right: 10px;
 }
 
+/* Mobile */
 @media (max-width: 600px) {
-  .footer {
+  .content-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .App-header {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  input[type="text"] {
     font-size: 18px;
-    padding: 5px 0;
-    flex-direction: column;
+    width: 180px;
   }
 
-  .footer a {
-    margin: 5px 0;
-    justify-content: center;
+  button {
+    font-size: 20px;
   }
 
-  .footer img {
-    width: 25px;
+  .pixl-text {
+    font-size: 25px;
+    max-width: 380px;
+  }
+
+  .footer {
+    display:none;
   }
 }

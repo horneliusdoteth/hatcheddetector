@@ -20,7 +20,7 @@ function App() {
   const [isMetadataMismatch, setIsMetadataMismatch] = useState(false);
   const [isOpenSeaPetApiDown, setIsOpenSeaPetApiDown] = useState(false);
   const [shadowColor, setShadowColor] = useState('rgba(255, 255, 255, 0.6)');
-  const baseCardHolderSize = { width: 250, height: 'auto' };
+  const baseCardHolderSize = { width: 225, height: 'auto' };
   const baseImageSize = { width: '100%', height: 'auto' };
 
 
