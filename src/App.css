@@ -272,7 +272,17 @@ button {
     margin-right: -10px;
   }
 
-  .pixl-ticker, .pixl-text, .os-pet-api, .confirmation-message, .mismatch-message {
+  .pixl-text {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .card-holder {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .pixl-ticker, .os-pet-api, .confirmation-message, .mismatch-message {
     font-size: 20px;
   }
 
