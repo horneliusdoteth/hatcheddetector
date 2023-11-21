@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Signature = () => {
   const [copySuccess, setCopySuccess] = useState('');
 
-  const ethAddress = "0x787946D32806650835dB716c2e7777E02c88034e";
+  const ethAddress = "0x8D59240a9EF010cc7D1b5671CA4878C659F8D290";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(ethAddress);
