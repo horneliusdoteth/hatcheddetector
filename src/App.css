@@ -230,12 +230,26 @@ button {
 /* Mobile */
 @media (max-width: 600px) {
   .content-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .App-header {
     font-size: 50px;
     margin-top: 20px;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate3d(100vw, 0, 0);
+    }
+    100% {
+      transform: translate3d(-150vw, 0, 0);
+    }
+  }
+  
+  .ticker-move {
+    display: inline-block;
+    animation: move 20s linear infinite;
   }
 
   input[type="text"] {
