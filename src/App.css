@@ -227,16 +227,23 @@ button {
   margin-right: 10px;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .content-wrapper {
-    margin-bottom: 10px;
-    max-height: 100vh;
+/* Existing CSS above... */
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .card-holder {
+    max-width: 250px;
+    margin: 10px auto;
+  }
+
+  .footer {
+    display: none;
   }
 
   .App-header {
     font-size: 50px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: -10px;
   }
 
   @keyframes move {
@@ -244,59 +251,32 @@ button {
       transform: translate3d(100vw, 0, 0);
     }
     100% {
-      transform: translate3d(-150vw, 0, 0);
+      transform: translate3d(-200vw, 0, 0);
     }
   }
-  
 
   input[type="text"] {
-    font-size: 18px;
-    width: 180px;
-  }
-
-  .card-holder {
-    margin: 15px auto;
-  }
-
-  button {
-    font-size: 20px;
-  }
-
-  .pixl-text {
-    font-size: 25px;
-    max-width: 380px;
+    width: 220px;
   }
 
   .signature-text {
-    background-color: #161616;
-    font-family: "VT323", monospace;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    margin-top: auto;
+    margin-bottom: 5px;
   }
 
-  .ethereum-tip {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
+  .tip-text {
+    font-size: 18px;
   }
 
   .eth-image {
-    margin-bottom: 8px;
-    margin-right: -25px;
-    margin-left: 10px;
-    margin-top: auto;
-  }
-  
-  .tip-text {
-    font-size: 18px;
-    color: #898888;
-    margin-top: auto;
+    margin-left: 20px;
+    margin-right: -10px;
   }
 
-  .footer {
-    display:none;
+  .pixl-ticker, .pixl-text, .os-pet-api, .confirmation-message, .mismatch-message {
+    font-size: 20px;
+  }
+
+  .ticker-wrap, .ticker-move, .ticker-item, .ticker-img {
+    font-size: 20px;
   }
 }
