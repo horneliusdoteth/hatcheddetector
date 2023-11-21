@@ -229,13 +229,13 @@ button {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .content-wrapper {
-    margin-bottom: 40px;
-  }
+  /* .content-wrapper {
+    margin-bottom: 10px;
+  } */
 
   .App-header {
     font-size: 50px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   @keyframes move {
@@ -247,10 +247,10 @@ button {
     }
   }
   
-  .ticker-move {
+  /* .ticker-move {
     display: inline-block;
     animation: move 20s linear infinite;
-  }
+  } */
 
   input[type="text"] {
     font-size: 18px;
@@ -264,6 +264,33 @@ button {
   .pixl-text {
     font-size: 25px;
     max-width: 380px;
+  }
+
+  .signature-text {
+    background-color: #161616;
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .ethereum-tip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .eth-image {
+    margin-bottom: 25px;
+    margin-right: -25px;
+    margin-left: 10px;
+  }
+  
+  .tip-text {
+    font-size: 18px;
+    color: #898888;
+    margin-bottom: 20px;
   }
 
   .footer {

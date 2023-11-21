@@ -27,7 +27,7 @@ const Signature = () => {
         hornelius.eth built this leveraging<br></br>the existing pixlverse api.
       </p>
       <div className="ethereum-tip" onClick={copyToClipboard} style={{ cursor: 'pointer' }}>
-          <img src='./images/ethereum-eth-logo-colored.svg' alt="Ethereum" style={{ width: '20px', height: '20px' }} />
+          <img className="eth-image" src='./images/ethereum-eth-logo-colored.svg' alt="Ethereum" style={{ width: '20px', height: '20px' }} />
         <span className="tip-text">
         Appreciate the magic? Your support helps! Tip: {ethAddress}
         {copySuccess && <div style={{ color: 'green' }}>{copySuccess}</div>}
