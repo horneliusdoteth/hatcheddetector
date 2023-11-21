@@ -9,12 +9,8 @@ const PIXLTicker = () => {
     usd: "Loading...",
     native: "Loading...",
   });
-  const [sappySealsFloor, setSappySealsFloor] =
-    useState("Loading...");
-  const [
-    genesisPixlPetFloor,
-    setGenesisPixlPetFloor,
-  ] = useState("Loading...");
+  const [sappySealsFloor, setSappySealsFloor] = useState("Loading...");
+  const [genesisPixlPetFloor, setGenesisPixlPetFloor] = useState("Loading...");
 
   useEffect(() => {
     const fetchPrice = async () => {
@@ -36,23 +32,27 @@ const PIXLTicker = () => {
           error
         );
         setPriceInfo({
-          usd: "N/A",
-          native: "N/A",
+          usd: " N/A",
+          native: " N/A",
         });
       }
     };
     fetchPrice();
 
     const fetchFloors = async () => {
-      const sappySealsPrice =
-        await fetchFloorPrice("sappy-seals");
-      setSappySealsFloor(sappySealsPrice);
+      const sappySealsPrice = await fetchFloorPrice("sappy-seals");
+      if (sappySealsPrice === null) {
+        setSappySealsFloor(" N/A");
+      } else {
+        setSappySealsFloor(sappySealsPrice);
+      }
 
-      const genesisPixlPrice =
-        await fetchFloorPrice(
-          "pixl-pets-genesis"
-        );
-      setGenesisPixlPetFloor(genesisPixlPrice);
+      const genesisPixlPrice = await fetchFloorPrice("pixl-pets-genesis");
+      if (genesisPixlPrice === null) {
+        setGenesisPixlPetFloor(" N/A");
+      } else {
+        setGenesisPixlPetFloor(genesisPixlPrice);
+      }
     };
 
     fetchFloors();

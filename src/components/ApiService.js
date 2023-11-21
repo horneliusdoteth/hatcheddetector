@@ -9,10 +9,7 @@ export const fetchFloorPrice = async (
     );
     return response.data.floorPrice;
   } catch (error) {
-    console.error(
-      "Error fetching floor price:",
-      error
-    );
+    console.error("Error fetching floor price:", error);
     return null;
   }
 };

@@ -59,6 +59,10 @@ button {
   font-family: "VT323", monospace;
 }
 
+.toast {
+  font-family: "VT323", monospace;
+}
+
 /* Ticker styles */
 .pixl-ticker {
   overflow: hidden;
@@ -112,7 +116,7 @@ button {
   flex-direction: column;
 }
 
-
+/* Pixl Text Style */
 .pixl-text {
   background-color: #161616;
   color: #fafafa;
@@ -121,6 +125,7 @@ button {
   margin-top: 20px;
 }
 
+/* Card Styles */
 .card-holder {
   border-radius: 15px;
   background-color: rgb(34, 33, 33);
@@ -160,7 +165,18 @@ button {
   color: rgb(192, 151, 69);
 }
 
+/* OpenSea Message Below Card */
+.os-pet-api {
+  font-size: 20px;
+  color: #898888;
+}
+
 .confirmation-message {
+  font-size: 20px;
+  color: #898888;
+}
+
+.mismatch-message {
   font-size: 20px;
   color: #898888;
 }
@@ -209,4 +225,21 @@ button {
   width: 30px;
   height: auto;
   margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 18px;
+    padding: 5px 0;
+    flex-direction: column;
+  }
+
+  .footer a {
+    margin: 5px 0;
+    justify-content: center;
+  }
+
+  .footer img {
+    width: 25px;
+  }
 }

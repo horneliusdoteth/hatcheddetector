@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PixlPetRenderer = ({ pixlPetData, shadowColor, submittedPixlPetId, isMetaDataMatch, isMetadataMismatch }) => {
+const PixlPetRenderer = ({ pixlPetData, shadowColor, submittedPixlPetId, isOpenSeaPetApiDown, isMetaDataMatch, isMetadataMismatch }) => {
   return (
     <div>
       {pixlPetData.imageUrl && (
@@ -27,17 +27,19 @@ const PixlPetRenderer = ({ pixlPetData, shadowColor, submittedPixlPetId, isMetaD
           </div>
         </div>
       )}
-
-      {isMetaDataMatch && (
+      {isOpenSeaPetApiDown ? (
+        <div className="os-pet-api">
+          OpenSea API Down. Cross analyzation<br/>unavailable at the moment.
+        </div>
+      ) : isMetaDataMatch ? (
         <div className="confirmation-message">
-          Cross analysis confirms the Opensea<br/> metadata is current.
+          Cross analysis confirms the Opensea<br/>metadata is current.
         </div>
-      )}
-      {isMetadataMismatch && (
+      ) : isMetadataMismatch ? (
         <div className="mismatch-message">
-          BEWARE. Cross analysis confirms the <br/>OpenSea metadata is not current.
+          BEWARE. Cross analysis confirms the<br/>OpenSea metadata is not current.
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

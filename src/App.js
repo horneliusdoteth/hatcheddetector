@@ -18,6 +18,7 @@ function App() {
   });
   const [isMetaDataMatch, setIsMetadataMatch] = useState(false);
   const [isMetadataMismatch, setIsMetadataMismatch] = useState(false);
+  const [isOpenSeaPetApiDown, setIsOpenSeaPetApiDown] = useState(false);
   const [shadowColor, setShadowColor] = useState('rgba(255, 255, 255, 0.6)');
   const baseCardHolderSize = { width: 250, height: 'auto' };
   const baseImageSize = { width: '100%', height: 'auto' };
@@ -32,6 +33,8 @@ function App() {
       return data.nft;
     } catch (error) {
       console.error("Error fetching data from OpenSea:", error);
+      console.log('api');
+      return "API_DOWN";
     }
   };
 
@@ -94,6 +97,12 @@ function App() {
 
       setIsMetadataMatch(urlsMatch);
       setIsMetadataMismatch(!urlsMatch);
+
+      if (openSeaData === "API_DOWN") {
+        setIsOpenSeaPetApiDown(true);
+      } else {
+        setIsOpenSeaPetApiDown(false);
+      }
       setPixlPetData({
         isHatched: true,
         imageUrl: pixlData.image,
@@ -161,6 +170,7 @@ function App() {
             pixlPetData={pixlPetData} 
             shadowColor={shadowColor} 
             submittedPixlPetId={submittedPixlPetId}
+            isOpenSeaPetApiDown={isOpenSeaPetApiDown}
             isMetaDataMatch={isMetaDataMatch}
             isMetadataMismatch={isMetadataMismatch}
         />
