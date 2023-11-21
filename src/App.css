@@ -232,7 +232,7 @@ button {
 /* Media Queries */
 @media screen and (max-width: 600px) {
   .card-holder {
-    max-width: 275px;
+    max-width: 250px;
     margin: 10px auto;
   }
 
