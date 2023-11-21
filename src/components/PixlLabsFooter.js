@@ -15,8 +15,7 @@ const PixlLabsFooter = () => {
             width: "111px",
             height: "32px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
+            marginRight: "0px",
           }}
         />
       </a>
@@ -32,11 +31,9 @@ const PixlLabsFooter = () => {
             width: "20px",
             height: "20px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
           }}
         />
-        Pixlverse GitBook
+        GitBook
       </a>
       <a
         href="https://www.thepixlverse.com/hatch"
@@ -50,11 +47,9 @@ const PixlLabsFooter = () => {
             width: "37px",
             height: "35px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
           }}
         />
-        Hatching
+        Hatch
       </a>
       <a
         href="https://twitter.com/ThePixlverse"
@@ -62,17 +57,15 @@ const PixlLabsFooter = () => {
         rel="noopener noreferrer"
       >
         <img
-          src="./images/twitter.svg.png"
+          src="./images/x.png"
           alt="PIXL Token"
           style={{
             width: "20px",
             height: "20px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
           }}
         />
-        Pixlverse Twitter
+        
       </a>
       <a
         href="https://opensea.io/collection/pixl-pets-genesis"
@@ -83,14 +76,12 @@ const PixlLabsFooter = () => {
           src="./images/os.svg"
           alt="PIXL Token"
           style={{
-            width: "20px",
-            height: "20px",
+            width: "25px",
+            height: "25px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
           }}
         />
-        Genesis Pixl Pets OS
+        
       </a>
       <a
         href="https://dexscreener.com/ethereum/0x7a9ddcf06260404d14abe3be99c1804d2a5239ce"
@@ -104,11 +95,8 @@ const PixlLabsFooter = () => {
             width: "20px",
             height: "20px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
           }}
         />
-        DEX Screener PIXL
       </a>
       <a
         href="https://twitter.com/horneliusdoteth"
@@ -122,12 +110,9 @@ const PixlLabsFooter = () => {
             width: "25px",
             height: "25px",
             position: "relative",
-            top: "2px",
-            marginRight: "5px",
             borderRadius: "100%",
           }}
         />
-        hornelius.eth twitter
       </a>
     </div>
     

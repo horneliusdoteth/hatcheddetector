@@ -210,24 +210,21 @@ button {
   align-items: center;
   font-family: "VT323", monospace;
   font-size: 25px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .footer a {
   color: #fafafa;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
 }
 
 .footer img {
-  width: 30px;
-  height: auto;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
-/* Existing CSS above... */
 
 /* Media Queries */
 @media screen and (max-width: 600px) {
@@ -236,6 +233,7 @@ button {
     margin: 10px auto;
   }
 
+  /* Footer styles */
   .footer {
     display: none;
   }
