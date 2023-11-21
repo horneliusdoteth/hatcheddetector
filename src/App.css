@@ -227,7 +227,7 @@ button {
   margin-right: 10px;
 }
 
-/* Mobile */
+/* Mobile
 @media (max-width: 600px) {
   .content-wrapper {
     margin-bottom: 50px;
@@ -302,4 +302,44 @@ button {
   body, html {
     min-height: 100vh
   }
+} */
+
+/* Adjust content-wrapper for mobile */
+@media (max-width: 600px) {
+  .content-wrapper {
+    margin-bottom: 50px; /* Adjust as needed for space */
+  }
+
+  .App-header {
+    font-size: 50px; /* Smaller font size for header */
+    margin-top: 20px; /* Less margin on top */
+  }
+
+  input[type="text"] {
+    font-size: 18px; /* Smaller font size for input */
+    width: 200px; /* Adjust width */
+  }
+
+  button {
+    font-size: 22px; /* Smaller font size for button */
+  }
+
+  .card-holder {
+    width: 90%; /* Adjust width to be responsive */
+    margin: 15px auto; /* Adjust margins */
+  }
+
+  .signature-text {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .footer {
+   display: none;
+  }
 }
+
+/* Ensure signature and footer are at the bottom */
+.signature-text{
+  margin-top: auto;
+}
+
