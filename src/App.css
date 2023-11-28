@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 /* Global Styles */
 body {
@@ -122,17 +123,27 @@ button {
   color: #fafafa;
   font-family: "VT323", monospace;
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-/* Card Styles */
+/* Pet and Metadata */
+.outermost-pet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
 .card-holder {
   border-radius: 15px;
   background-color: rgb(34, 33, 33);
   padding-top: 12px;
   padding-right: 12px;
   padding-left: 12px;
-  margin: 20px auto;
+  margin: 20px;
   margin-top: 30px;
   margin-bottom: 25px;
   width: 250px;
@@ -143,6 +154,46 @@ button {
   animation: swing 3.5s infinite alternate ease-in-out;
 }
 
+.metadata-table {
+  border-collapse: collapse;
+  box-shadow: 0 0 5px 5px #525252;
+  max-width: 600px;
+  border-radius: 20px;
+}
+
+.metadata-trait-header th {
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+}
+
+
+.metadata-table:hover {
+  animation-play-state: paused;
+}
+
+
+.metadata-table th {
+  padding: 2px;
+  padding-left: 30px;
+  text-align: center;
+  color:#e4e4e4;
+  font-size: 23px;
+  font-weight: normal;
+}
+.metadata-table td {
+  padding: 3px;
+  padding-left: 30px;
+  text-align: center;
+  color: #d5d4d4;
+  /* background-color: #252424; */
+  font-size: 20px;
+}
+
+.metadata-api-down {
+  font-size: 22px;
+  font-weight: normal;
+}
 
 @keyframes swing {
   0% {
@@ -169,16 +220,19 @@ button {
 .os-pet-api {
   font-size: 20px;
   color: #898888;
+  margin-bottom: 40px;
 }
 
 .confirmation-message {
   font-size: 20px;
   color: #898888;
+  margin-bottom: 40px;
 }
 
 .mismatch-message {
   font-size: 20px;
   color: #898888;
+  margin-bottom: 40px;
 }
 
 /* Signature style */
@@ -193,7 +247,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -15px;
+  margin-top: -10px;
 }
 
 .tip-text {
@@ -234,6 +288,12 @@ button {
     margin: 10px auto;
   }
 
+  .metadata-table {
+    border-collapse: collapse;
+    border: 2px solid #ffffff;
+    max-width: 300px;
+  }
+
   /* Footer styles */
   .footer {
     display: none;
@@ -259,11 +319,15 @@ button {
   }
 
   .signature-text {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .tip-text {
     font-size: 18px;
+  }
+
+  .ethereum-tip {
+    margin-bottom: 10px;
   }
 
   .eth-image {

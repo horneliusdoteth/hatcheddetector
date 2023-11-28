@@ -14,7 +14,7 @@ const Signature = () => {
   return (
     <div className="signature">
       <img
-        src="./images/sealjpg.jpg"
+        src="./images/hornelius.jpg"
         alt="hornelius.eth"
         style={{
           width: "75px",
@@ -29,7 +29,7 @@ const Signature = () => {
       <div className="ethereum-tip" onClick={copyToClipboard} style={{ cursor: 'pointer' }}>
           <img className="eth-image" src='./images/ethereum-eth-logo-colored.svg' alt="Ethereum" style={{ width: '20px', height: '20px' }} />
         <span className="tip-text">
-        Appreciate the magic? Your support helps! Tip: {ethAddress}
+        Appreciate the magic? Your support helps: {ethAddress}
         {copySuccess && <div style={{ color: 'green' }}>{copySuccess}</div>}
         </span>
       </div>

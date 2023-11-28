@@ -104,7 +104,7 @@ const PixlLabsFooter = () => {
         rel="noopener noreferrer"
       >
         <img
-          src="./images/sealjpg.jpg"
+          src="./images/hornelius.jpg"
           alt="hornelius"
           style={{
             width: "25px",

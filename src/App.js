@@ -14,7 +14,8 @@ function App() {
     imageUrl: "",
     message: "",
     cardHolderSize: "",
-    imageSize: ""
+    imageSize: "",
+    openSeaMetaData: null,
   });
   const [isMetaDataMatch, setIsMetadataMatch] = useState(false);
   const [isMetadataMismatch, setIsMetadataMismatch] = useState(false);
@@ -33,7 +34,6 @@ function App() {
       return data.nft;
     } catch (error) {
       console.error("Error fetching data from OpenSea:", error);
-      console.log('api');
       return "API_DOWN";
     }
   };
@@ -49,9 +49,10 @@ function App() {
         imageUrl: "./images/cooking.webp",
         message: "We all got bamboozled, apis down. Check back shortly.",
         cardHolderSize: baseCardHolderSize,
-        imageSize: baseImageSize
+        imageSize: baseImageSize,
+        openSeaMetaData: []
       });
-      return null;
+      return [];
     }
   };
   
@@ -74,8 +75,10 @@ function App() {
   };
 
   const handleSubmit = async () => {
+    try {
     const pixlData = await fetchPixlPetData();
-
+    const openSeaData = await fetchOpenSeaData();
+    
     const newShadowColor = determineShadowColor(pixlData.attributes);
     setShadowColor(newShadowColor);
 
@@ -83,7 +86,7 @@ function App() {
     setSubmittedPixlPetId(pixlPetId);
 
     if (isHatched) {
-      const openSeaData = await fetchOpenSeaData();
+
       const urlsMatch = pixlData.image === openSeaData?.image_url;
       const isDeity = pixlData.attributes.some(attr => attr.trait_type === "Deity");
 
@@ -108,7 +111,8 @@ function App() {
         imageUrl: pixlData.image,
         message: `Anon, don't get bamboozled. The egg's been hatched.`,
         cardHolderSize: scaledCardHolderSize,
-        imageSize: scaledImageSize
+        imageSize: scaledImageSize,
+        openSeaMetaData: openSeaData?.traits,
       });
     } else {
       setIsMetadataMatch(false);
@@ -146,9 +150,13 @@ function App() {
         imageUrl: animationUrl,
         message: `Anon, its not hatched.<br>Don't be a coward, scoop it before they hatch.`,
         cardHolderSize: baseCardHolderSize,
-        imageSize: baseImageSize
+        imageSize: baseImageSize,
+        openSeaMetaData: openSeaData?.traits,
       });
-    }
+    } 
+  } catch (error) {
+    console.log("error fetching data")
+  }
   };
 
   return (
@@ -166,6 +174,7 @@ function App() {
             placeholder="Enter Pixl Pet ID 1-15000"
           />
         </div>
+        <div className="container">
           <PixlPetRenderer 
             pixlPetData={pixlPetData} 
             shadowColor={shadowColor} 
@@ -173,7 +182,9 @@ function App() {
             isOpenSeaPetApiDown={isOpenSeaPetApiDown}
             isMetaDataMatch={isMetaDataMatch}
             isMetadataMismatch={isMetadataMismatch}
-        />
+            metadata={pixlPetData.openSeaMetaData}
+          />
+        </div>
       </main>
       <div>
         <Signature />
