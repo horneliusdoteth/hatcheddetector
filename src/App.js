@@ -41,7 +41,7 @@ function App() {
   const fetchPixlPetData = async () => {
     try {
       console.log('pixl pet id: ' + pixlPetId)
-      const response = await fetch(`https://www.thepixlverse.io/pixlpets/${pixlPetId}`);
+      const response = await fetch(`https://www.sappy.lol/project-o/api/pixlpets/${pixlPetId}`);
       const pixlData = await response.json();
       return pixlData;
     } catch (error) {
