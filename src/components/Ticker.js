@@ -53,6 +53,10 @@ const PIXLTicker = () => {
       } else {
         setGenesisPixlPetFloor(genesisPixlPrice);
       }
+      console.log('sappySealsFloor:'+sappySealsFloor)
+      console.log('sappySealsPrice:'+sappySealsPrice)
+      console.log('genesisPixlPetFloor:'+genesisPixlPetFloor)
+      console.log('genesisPixlPetPrice:'+genesisPixlPrice)
     };
 
     fetchFloors();
