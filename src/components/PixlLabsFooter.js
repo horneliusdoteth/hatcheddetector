@@ -9,39 +9,24 @@ const PixlLabsFooter = () => {
         rel="noopener noreferrer"
       >
         <img
-          src="./images/Logo_Pixlverse.png"
+          src="./images/omnia_logo.png"
           alt="PIXL Token"
           style={{
-            width: "111px",
+            width: "100px",
             height: "32px",
             position: "relative",
             marginRight: "0px",
+            borderRadius: "4px",
           }}
         />
       </a>
       <a
-        href="https://gitbook.thepixlverse.com/"
+        href="https://www.omnia.lol/hatching"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
-          src="./images/PIXL.png"
-          alt="PIXL Token"
-          style={{
-            width: "20px",
-            height: "20px",
-            position: "relative",
-          }}
-        />
-        GitBook
-      </a>
-      <a
-        href="https://www.thepixlverse.com/hatch"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="./images/fire.webp"
+          src="./images/omnis.png"
           alt="PIXL Token"
           style={{
             width: "37px",
@@ -52,7 +37,7 @@ const PixlLabsFooter = () => {
         Hatch
       </a>
       <a
-        href="https://twitter.com/ThePixlverse"
+        href="https://x.com/ExploreOmnia"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -84,7 +69,7 @@ const PixlLabsFooter = () => {
         
       </a>
       <a
-        href="https://dexscreener.com/ethereum/0x7a9ddcf06260404d14abe3be99c1804d2a5239ce"
+        href="https://dexscreener.com/ethereum/0x31c0ba10e4e12be6cdceb612e5e829d977532bfc"
         target="_blank"
         rel="noopener noreferrer"
       >

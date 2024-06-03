@@ -66,9 +66,9 @@ const PIXLTicker = () => {
         <div className="ticker-move">
           <div className="ticker-item">
             <img
-              src={"./images/pixlverse.jpg"}
-              alt="Pixlverse"
-              height="25"
+              src={"./images/omnis_green.png"}
+              alt="Omni Pets"
+              height="30"
               style={{
                 position: "relative",
                 top: "5px",
@@ -76,19 +76,19 @@ const PIXLTicker = () => {
                 borderRadius: "100px",
               }}
             />
-            Pixl Pets Ξ{genesisPixlPetFloor}
+            Omnis Ξ{genesisPixlPetFloor}
           </div>
           <div className="ticker-item">
             <img
-              src={"./images/frankenseal.png"}
+              src={"./images/sappyseals.jpg"}
               alt="Sappy Seals"
-              height="25"
+              height="30"
               style={{
                 position: "relative",
                 top: "5px",
                 marginLeft: "25px",
                 marginRight: "5px",
-                borderRadius: "100px",
+                borderRadius: "5px",
               }}
             />
             Sappy Seals Ξ{sappySealsFloor}
@@ -98,7 +98,7 @@ const PIXLTicker = () => {
               className="ticker-img"
               src={pixlTokenSymbol}
               alt="PIXL Token"
-              height="25"
+              height="30"
               style={{
                 position: "relative",
                 top: "4px",

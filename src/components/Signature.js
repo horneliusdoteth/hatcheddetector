@@ -24,7 +24,7 @@ const Signature = () => {
         }}
       />
       <p className="signature-text">
-        hornelius.eth built this leveraging<br></br>the existing pixlverse api.
+        Built by hornelius.eth<br></br><a className="sealtoshis" href="https://x.com/sealtoshis" target="/blank">@sealtoshis</a> launching soon, check it.
       </p>
       <div className="ethereum-tip" onClick={copyToClipboard} style={{ cursor: 'pointer' }}>
           <img className="eth-image" src='./images/ethereum-eth-logo-colored.svg' alt="Ethereum" style={{ width: '20px', height: '20px' }} />

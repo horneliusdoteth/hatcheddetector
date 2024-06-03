@@ -22,7 +22,7 @@ function App() {
   const [isOpenSeaPetApiDown, setIsOpenSeaPetApiDown] = useState(false);
   const [shadowColor, setShadowColor] = useState('rgba(255, 255, 255, 0.6)');
   const baseCardHolderSize = { width: 250, height: 'auto' };
-  const baseImageSize = { width: '100%', height: 'auto' };
+  const baseImageSize = { width: '350px', height: '350px' };
 
 
   const handleInputChange = (event) => { setPixlPetId(event.target.value); };
@@ -41,7 +41,7 @@ function App() {
   const fetchPixlPetData = async () => {
     try {
       console.log('pixl pet id: ' + pixlPetId)
-      const response = await fetch(`https://www.sappy.lol/project-o/api/pixlpets/${pixlPetId}`);
+      const response = await fetch(`https://nnn9h2c1yj.execute-api.us-east-1.amazonaws.com/fetchOmniaPet/${pixlPetId}`);
       const pixlData = await response.json();
       return pixlData;
     } catch (error) {
@@ -79,7 +79,7 @@ function App() {
     try {
     const pixlData = await fetchPixlPetData();
     const openSeaData = await fetchOpenSeaData();
-    
+   
     const newShadowColor = determineShadowColor(pixlData.attributes);
     setShadowColor(newShadowColor);
 
@@ -87,12 +87,14 @@ function App() {
     setSubmittedPixlPetId(pixlPetId);
 
     if (isHatched) {
-
+      // baseCardHolderSize.width= 250;
+      baseCardHolderSize.height=550;
+      const imageUrl = openSeaData.animation_url;
       const urlsMatch = pixlData.image === openSeaData?.image_url;
       const isDeity = pixlData.attributes.some(attr => attr.trait_type === "Deity");
 
       const scaledCardHolderSize = isDeity 
-      ? { width: baseCardHolderSize.width * 1.3, height: baseCardHolderSize.height * 1.3 }
+      ? { width: baseCardHolderSize.width, height: baseCardHolderSize.height}
       : baseCardHolderSize;
 
       const scaledImageSize = isDeity 
@@ -109,38 +111,39 @@ function App() {
       }
       setPixlPetData({
         isHatched: true,
-        imageUrl: pixlData.image,
+        imageUrl: imageUrl,
         message: `Anon, don't get bamboozled. The egg's been hatched.`,
         cardHolderSize: scaledCardHolderSize,
         imageSize: scaledImageSize,
         openSeaMetaData: openSeaData?.traits,
       });
     } else {
+      baseCardHolderSize.height=350;
       setIsMetadataMatch(false);
       setIsMetadataMismatch(false);
       const element = pixlData.attributes.find(attr => attr.trait_type === "Element").value;
-      let animationUrl;
+      let eggAnimation;
       let newShadowColor;
 
       switch (element) {
         case "Earth":
-          animationUrl = "./images/earth.webp";
+          eggAnimation = "./images/earth.webp";
           newShadowColor = 'rgba(65, 128, 65, 0.6)';
           break;
         case "Fire":
-          animationUrl = "./images/fire.webp";
+          eggAnimation = "./images/fire.webp";
           newShadowColor = 'rgba(205, 92, 92, 0.6)';
           break;
         case "Water":
-          animationUrl = "./images/water.webp";
+          eggAnimation = "./images/water.webp";
           newShadowColor = 'rgba(100, 149, 237, 0.6)';
           break;
         case "Air":
-          animationUrl = "./images/air.webp";
+          eggAnimation = "./images/air.webp";
           newShadowColor = 'rgba(211, 211, 211, 0.6)';
           break;
         default:
-          animationUrl = "cooking.webp";
+          eggAnimation = "cooking.webp";
           newShadowColor = 'rgba(255, 255, 255, 0.6)';
       }
 
@@ -148,7 +151,7 @@ function App() {
 
       setPixlPetData({
         isHatched: false,
-        imageUrl: animationUrl,
+        imageUrl: eggAnimation,
         message: `Anon, its not hatched.<br>Don't be a coward, scoop it before they hatch.`,
         cardHolderSize: baseCardHolderSize,
         imageSize: baseImageSize,
@@ -156,7 +159,7 @@ function App() {
       });
     } 
   } catch (error) {
-    console.log("error fetching data")
+    console.log("error fetching data idiot")
   }
   };
 

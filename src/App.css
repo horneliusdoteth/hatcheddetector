@@ -12,6 +12,10 @@ body {
   color: #fafafa;
   text-align: center;
   font-family: "VT323", monospace;
+  background-image: url('/public/images/scurry.webp');
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
 }
 
 /* App layout */
@@ -22,14 +26,15 @@ body {
 }
 
 .App-header {
-  background-color: #161616;
+  /* background-color: #161616; */
   margin-top: 40px;
-  font-size: 75px;
+  font-size: 85px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 /* Input styles */
@@ -38,7 +43,7 @@ body {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
-  background-color: #161616;
+  /* background-color: #161616; */
 }
 
 input[type="text"] {
@@ -68,11 +73,12 @@ button {
 .pixl-ticker {
   overflow: hidden;
   white-space: nowrap;
-  background-color: #161616;
+  /* background-color: #161616; */
   color: #fafafa;
   font-family: "VT323", monospace;
-  font-size: 25px;
+  font-size: 32px;
   margin-top: 10px;
+  user-select: none;
 }
 
 .ticker-wrap {
@@ -119,10 +125,10 @@ button {
 
 /* Pixl Text Style */
 .pixl-text {
-  background-color: #161616;
+  /* background-color: #161616; */
   color: #fafafa;
   font-family: "VT323", monospace;
-  font-size: 28px;
+  font-size: 32px;
   margin-top: 40px;
 }
 
@@ -140,13 +146,11 @@ button {
 .card-holder {
   border-radius: 15px;
   background-color: rgb(34, 33, 33);
-  padding-top: 12px;
-  padding-right: 12px;
-  padding-left: 12px;
   margin: 20px;
   margin-top: 30px;
   margin-bottom: 25px;
-  width: 250px;
+  max-width: 500px;
+  max-height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,6 +163,7 @@ button {
   box-shadow: 0 0 5px 5px #525252;
   max-width: 600px;
   border-radius: 20px;
+  background-color: rgb(34, 33, 33);
 }
 
 .metadata-trait-header th {
@@ -176,10 +181,11 @@ button {
 .metadata-table th {
   padding: 2px;
   padding-left: 30px;
+  padding-bottom: 15px;
   text-align: center;
   color:#e4e4e4;
-  font-size: 23px;
-  font-weight: normal;
+  font-size: 30px;
+  font-weight: bold;
 }
 .metadata-table td {
   padding: 3px;
@@ -187,7 +193,7 @@ button {
   text-align: center;
   color: #d5d4d4;
   /* background-color: #252424; */
-  font-size: 20px;
+  font-size: 26px;
 }
 
 .metadata-api-down {
@@ -204,17 +210,10 @@ button {
   }
 }
 
-.card-image {
+/* .card-image {
   width: 100%;
   display: block;
-}
-
-.card-footer {
-  margin-bottom: 5px;
-  font-size: 22px;
-  font-weight: bold;
-  color: rgb(192, 151, 69);
-}
+} */
 
 /* OpenSea Message Below Card */
 .os-pet-api {
@@ -237,10 +236,15 @@ button {
 
 /* Signature style */
 .signature-text {
-  background-color: #161616;
+  /* background-color: #161616; */
   font-family: "VT323", monospace;
   font-size: 22px;
   margin-top: 0px;
+}
+
+.sealtoshis {
+  color: #fafafa;
+  text-decoration: underline;
 }
 
 .ethereum-tip {
@@ -258,7 +262,7 @@ button {
 /* Footer styles */
 .footer {
   width: 100%;
-  background-color: #161616;
+  /* background-color: #161616; */
   padding: 10px 0;
   display: flex;
   justify-content: center;
