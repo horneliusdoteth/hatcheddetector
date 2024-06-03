@@ -7,6 +7,7 @@ export const fetchFloorPrice = async (collectionSlug) => {
     }
 
     const data = await response.json();
+    return data;
   } catch (error) {
     console.error("Error fetching floor price:", error);
     return null;

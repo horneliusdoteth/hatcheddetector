@@ -40,24 +40,21 @@ const PIXLTicker = () => {
     fetchPrice();
 
     const fetchFloors = async () => {
-      const sappySealsPrice = await fetchFloorPrice("sappy-seals");
-      if (sappySealsPrice === null) {
+      const sappySealsData = await fetchFloorPrice("sappy-seals");
+      if (sappySealsData === null) {
         setSappySealsFloor(" N/A");
       } else {
-        setSappySealsFloor(sappySealsPrice);
+        setSappySealsFloor(sappySealsData.floorPrice);
       }
-
-      const genesisPixlPrice = await fetchFloorPrice("pixl-pets-genesis");
-      if (genesisPixlPrice === null) {
+    
+      const genesisPixlData = await fetchFloorPrice("pixl-pets-genesis");
+      if (genesisPixlData === null) {
         setGenesisPixlPetFloor(" N/A");
       } else {
-        setGenesisPixlPetFloor(genesisPixlPrice);
+        setGenesisPixlPetFloor(genesisPixlData.floorPrice);
       }
-      console.log('sappySealsFloor:'+sappySealsFloor)
-      console.log('sappySealsPrice:'+sappySealsPrice)
-      console.log('genesisPixlPetFloor:'+genesisPixlPetFloor)
-      console.log('genesisPixlPetPrice:'+genesisPixlPrice)
     };
+    
 
     fetchFloors();
   }, []);
