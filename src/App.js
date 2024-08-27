@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import PixlPetRenderer from "./components/PixlPetRenderer";
 import UserInput from "./components/UserInput";
 import Ticker from "./components/Ticker";
@@ -7,6 +8,7 @@ import Signature from "./components/Signature";
 import "./App.css";
 
 function App() {
+  const location = useLocation();
   const [pixlPetId, setPixlPetId] = useState("");
   const [submittedPixlPetId, setSubmittedPixlPetId] = useState("");
   const [pixlPetData, setPixlPetData] = useState({
@@ -26,7 +28,11 @@ function App() {
 
 
   const handleInputChange = (event) => { setPixlPetId(event.target.value); };
-
+  useEffect(() => {
+    window.gtag('config', 'G-EWG9YG232B', {
+      page_path: location.pathname,
+    });
+  }, [location])
   const fetchOpenSeaData = async () => {
     try {
       const response = await fetch(`https://ufbzadwdb4.execute-api.us-east-1.amazonaws.com/PixlPetOsAPI/${pixlPetId}`);
